@@ -49,9 +49,13 @@
 }
 .nav_container{
   position: absolute;
-  left: 0;
+  left: -150%;
   right: 0;
   top: 110px;
+  transition: .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.nav_container.active{
+  left: 0;
 }
 .header_logo{
   display: flex;
