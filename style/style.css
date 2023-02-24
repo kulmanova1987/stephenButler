@@ -1,0 +1,438 @@
+@import 'font.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Malgun-Gothic-Semilight';
+}
+
+.container{
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+:root{
+  --whiteColor: #FFFFFF;
+  --blackColor: #000000;
+}
+
+/*header*/
+.header{
+ width: 100%;
+ height: 1010px;
+ overflow: hidden;
+}
+.header_bg{
+  width: 110%;
+  height: 110%;
+  position: relative;
+}
+.parallax_bg{
+  background: url(../images/header_bg.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  padding-top: 70px;
+  padding-bottom: 126px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.nav_container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+}
+.header_logo{
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+.header_list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.header_nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_link{
+  font-size: 16px;
+  line-height: 21px;
+  color: var(--whiteColor);
+  transition: 1s;
+    transition-duration: 1s;
+    position: relative;
+}
+.header_link::after{
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background: var(--whiteColor);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease-out;
+}
+.header_link:hover::after{
+  transform: scaleX(1);
+  transform-origin: center center;
+}
+.header_blok-info{
+  margin-top: 108px;
+  padding-left: 100px;
+}
+.header_title{
+  color: var(--whiteColor);
+  font-size: 45px;
+line-height: 50px;
+font-family: 'Quattrocento-Regular';
+max-width: 567px;
+width: 100%;
+margin-bottom: 70px;
+font-weight: 400;
+}
+.header__desc{
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 28px;
+  max-width: 941px;
+  width: 100%;
+  color: #FFFFFF;
+  font-family: 'Malgun-Gothic-Semilight';
+}
+.header_printings{
+  margin-top: 33px;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 75px;
+  padding-left: 100px;
+}
+.header_blok-links{
+  max-width: 630px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_blok-view{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--whiteColor);
+  font-family: 'Malgun-Gothic-Semilight';
+  transition: .8s;
+  border: 1px solid var(--whiteColor);
+  padding: 8px 16px;
+}
+.header_blok-view:hover{
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+  border-radius: 16px;
+}
+
+/* main */
+
+.main_bloks{
+  margin-top: 113px;
+  margin-bottom: 110px;
+  padding-left: 70px;
+  display: flex;
+    flex-direction: column;
+    gap: 133px;
+}
+.main_blok{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 240px;
+}
+.main_blok-left{
+  max-width: 400px;
+  width: 100%;
+}
+.main_blok-left img{
+  width: 100%;
+}
+.main_blok-right{
+  max-width: 670px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main_blok-title{
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 16px;
+  color: var(--blackColor);
+  font-family: 'Malgun-Gothic-Semilight';
+}
+.main_blok-desc{
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 31px;
+  font-family: 'Malgun-Gothic-Semilight';
+  color: var(--blackColor);
+}
+.main_blok-btn{
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Malgun-Gothic-Semilight';
+  color: var(--blackColor);
+  border: 1px solid #000000;
+  padding: 4px 10px;
+  transition: .8s;
+}
+.main_blok-btn:hover{
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  border-radius: 16px;
+}
+
+/*latest addition*/
+
+.main_latest-addition{
+  margin-top: 110px;
+}
+.main_latest-title{
+  font-weight: 400;
+font-size: 35px;
+line-height: 39px;
+color: var(--blackColor);
+font-family: 'Quattrocento-Regular';
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+.main_latest-title::before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 435.03px;
+  background-color:  rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+.main_latest-title::after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 435.03px;
+  background-color:  rgba(0, 0, 0, 0.5);
+  right: 0;
+}
+.main__latest-slider{
+  margin-top: 105px;
+}
+.card{
+  max-width: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cards_wrapper{
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 170px;
+  row-gap: 68px;
+  flex-wrap: wrap;
+}
+
+/*A World of Fine Books and Medieval Manuscripts*/
+
+.main_description-about{
+  margin-top: 96px;
+  margin-bottom: 110px;
+}
+.main_description-title{
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--blackColor);
+  text-align: center;
+  margin-bottom: 30px;
+   font-family: 'Malgun-Gothic-Semilight';
+}
+.main_description-text{
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--blackColor);
+  text-align: center;
+   font-family: 'Malgun-Gothic-Semilight';
+   max-width: 970px;
+    width: 100%;
+    margin: auto;
+}
+.main_description-about .header_printings{
+  padding-left: 0;
+  justify-content: center;
+  margin-top: 110px;
+  margin-bottom: 0;
+}
+
+.main_get-inTouch-blok{
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 75px;
+  display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.getinTouch_blok-Left{
+  max-width: 500px;
+  width: 100%;
+  
+}
+.blok_left-desc{
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: 'Malgun-Gothic-Semilight';
+  color: var(--blackColor);
+  margin-bottom: 65px;
+}
+.blol_left-tel{
+  display: flex;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: 'Malgun-Gothic-Semilight';
+  color: var(--blackColor);
+  margin-bottom: 26px;
+}
+.getinTouch_blok-Right{
+  max-width: 430px;
+  width: 100%;
+}
+.getinTouch_blok-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 34px;
+}
+.input_name{
+  width: 100%;
+  border: 1px solid var(--blackColor);
+  border-radius: 30px;
+  padding: 4px 20px;
+  outline: none;
+}
+.input_name::placeholder{
+  font-weight: 300;
+font-size: 15px;
+line-height: 20px;
+font-family: 'Malgun-Gothic-Semilight';
+color: var(--blackColor);
+}
+.main_btn{
+  background: rgba(208, 204, 204, 0.16);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  border: none;
+  padding: 5px 33px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  transition: .8s;
+  color: var(--blackColor);
+}
+.main_btn:hover{
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.38) -52.39%, rgba(217, 217, 217, 0) 72.49%);
+}
+.main_btn:active{
+  background-color: greenyellow;
+}
+
+
+.footer{
+  padding-top: 38px;
+  padding-bottom: 60px;
+  margin-top: 75px;
+}
+.footer_filter{
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.38) -52.39%, rgba(217, 217, 217, 0) 72.49%);
+  filter: blur(26.5px);
+}
+.footer_info-links{
+  display: flex;
+  column-gap: 211px;
+  align-items: center;
+}
+.footer_reg-link{
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+  font-family: 'Malgun-Gothic-Semilight';
+  color: var(--blackColor);
+}
+
+.footer_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 580px;
+  width: 100%;
+}
+.footer_link{
+  font-weight: 300;
+font-size: 15px;
+line-height: 20px;
+font-family: 'Malgun-Gothic-Semilight';
+color: var(--blackColor);
+}
+.footer_list-li:not(:last-child){
+  position: relative;
+}
+.footer_list-li:not(:last-child):after{
+  content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: var(--blackColor);
+    border-radius: 50%;
+    right: -15px;
+    top: 9px;
+}
+.footer_info-desc{
+  font-weight: 300;
+font-size: 17px;
+line-height: 23px;
+font-family: 'Malgun-Gothic-Semilight';
+color: var(--blackColor);
+max-width: 330px;
+width: 100%;
+}
+.footer_info-signUp{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-top: 35px;
+}
+.footer_info-signUp .getinTouch_blok-form{
+  max-width: 370px;
+  width: 100%;
+  gap: 12px;
+}
