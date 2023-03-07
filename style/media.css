@@ -15,6 +15,9 @@
   .main_books-info {
     padding: 0 15px;
   }
+  .main_about-container{
+    padding: 0 15px;
+  }
   .footer_info {
     padding-left: 15px;
     padding-right: 15px;
@@ -28,9 +31,10 @@
   .main_latest-title::before {
     width: 360px;
   }
-  /* .cards_wrapper {
+  .main_about-container{
     justify-content: center;
-  } */
+    row-gap: 15px;
+  }
 }
 @media (max-width: 1125px) {
   .header {
@@ -51,10 +55,16 @@
   .header_list {
     gap: 15px;
   }
+  .contact_bloc-container{
+    padding: 0 15px;
+  }
 }
 @media (max-width: 1070px) {
   .header_nav-list {
     padding-left: 40px;
+  }
+  .main_video-container{
+    padding: 0 15px;
   }
 }
 @media (max-width: 1045px) {
@@ -149,6 +159,10 @@
   .main_latest-title::before {
     content: none;
   }
+  .contact_bloc-container{
+    column-gap: 15px;
+justify-content: center;
+  }
 }
 @media (max-width: 875px) {
   .main_blok {
@@ -239,6 +253,15 @@
     flex-direction: column;
     row-gap: 15px;
   }
+  .main_assosiations-container{
+    padding: 0 15px;
+  }
+}
+@media (max-width: 530px) {
+  .main_assosiations-container{
+   justify-content: center;
+   row-gap: 15px;
+  }
 }
 @media (max-width: 525px) {
   .header_nav-list {
@@ -268,6 +291,10 @@
   .main_illumination-right {
     flex-direction: column;
     row-gap: 15px;
+  }
+  .bloc_right-desc,
+  .bloc_right-tel{
+    font-size: 20px;
   }
 }
 @media (max-width: 340px) {
