@@ -462,6 +462,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  cursor: pointer;
 }
 .cards_wrapper {
   display: flex;
@@ -472,6 +473,30 @@
 }
 .swiper-pagination {
   display: none;
+}
+
+/* swiper-container */
+.exposition_of-hewbrews{
+  margin-top: 60px;
+}
+swiper-container:nth-child(2){
+  top: 50px;
+}
+.swiper-slide-active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.swiper-slide-active img{
+  width:600px;
+  height: 600px;
+  object-fit: contain;
+}
+.swiper-slide-thumb-active img,
+.swiper-slide-visible img{
+  height: 290px;
+  width: 230px;
 }
 .books_wrapper {
   gap: 135px;

@@ -48,6 +48,7 @@ const booksLatestSwiper = document.querySelector(".books_latest_swiper");
 const manuscriptsSwiper = document.querySelector(".manuscripts_swiper");
 
 
+
 if (slider) {
   function mobileSlider() {
     if (window.innerWidth <= 890 && slider.dataset.mobile == "false") {
