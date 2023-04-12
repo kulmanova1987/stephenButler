@@ -175,3 +175,22 @@ if (manuscriptsSwiper) {
     mobileMauscriptSwiper();
   });
 }
+
+/**************tabs in additional pages*******************/
+
+let tabs = document.querySelectorAll('.description_tab');
+let descTabs = document.querySelectorAll('.tabs_description');
+
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener('click', function(e) {
+    e.preventDefault();
+    for (let j = 0; j < tabs.length; j++) {
+      tabs[j].classList.remove('active');
+      descTabs[j].classList.remove('active');
+      
+    }
+    tabs[i].classList.add('active');
+    descTabs[i].classList.add('active');
+  })
+  
+}

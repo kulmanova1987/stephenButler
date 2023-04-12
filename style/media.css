@@ -15,12 +15,15 @@
   .main_books-info {
     padding: 0 15px;
   }
-  .main_about-container{
+  .main_about-container {
     padding: 0 15px;
   }
   .footer_info {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .description {
+    padding: 0 15px;
   }
 }
 @media (max-width: 1150px) {
@@ -31,7 +34,7 @@
   .main_latest-title::before {
     width: 360px;
   }
-  .main_about-container{
+  .main_about-container {
     justify-content: center;
     row-gap: 15px;
   }
@@ -55,7 +58,7 @@
   .header_list {
     gap: 15px;
   }
-  .contact_bloc-container{
+  .contact_bloc-container {
     padding: 0 15px;
   }
 }
@@ -63,7 +66,7 @@
   .header_nav-list {
     padding-left: 40px;
   }
-  .main_video-container{
+  .main_video-container {
     padding: 0 15px;
   }
 }
@@ -92,6 +95,10 @@
   }
   .search_btn {
     right: 25px;
+  }
+  .exposition_of-hewbrews {
+    padding: 0 15px;
+    gap: 0;
   }
 }
 @media (max-width: 990px) {
@@ -159,9 +166,9 @@
   .main_latest-title::before {
     content: none;
   }
-  .contact_bloc-container{
+  .contact_bloc-container {
     column-gap: 15px;
-justify-content: center;
+    justify-content: center;
   }
 }
 @media (max-width: 875px) {
@@ -207,12 +214,21 @@ justify-content: center;
     justify-content: center;
   }
 }
-
+@media (max-width: 830px) {
+  .exposition_of-hewbrews {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 785px) {
   .footer_info-links,
   .footer_info-signUp {
     justify-content: center;
     row-gap: 15px;
+  }
+  .enquiry_container{
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 660px) {
@@ -246,6 +262,13 @@ justify-content: center;
   .footer_list-li:not(:last-child):after {
     content: none;
   }
+  .input_forms {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabs_container {
+    height: 670px;
+  }
 }
 
 @media (max-width: 605px) {
@@ -253,14 +276,17 @@ justify-content: center;
     flex-direction: column;
     row-gap: 15px;
   }
-  .main_assosiations-container{
+  .main_assosiations-container {
     padding: 0 15px;
+  }
+  .tabs_container {
+    height: 710px;
   }
 }
 @media (max-width: 530px) {
-  .main_assosiations-container{
-   justify-content: center;
-   row-gap: 15px;
+  .main_assosiations-container {
+    justify-content: center;
+    row-gap: 15px;
   }
 }
 @media (max-width: 525px) {
@@ -287,14 +313,37 @@ justify-content: center;
     font-size: 18px;
   }
 }
+@media (max-width: 410px) {
+  .tabs_container {
+    height: 735px;
+  }
+  .footer {
+    margin-top: 0;
+  }
+  .description_form {
+    padding: 32px 28px 18px 20px;
+}
+}
 @media (max-width: 395px) {
   .main_illumination-right {
     flex-direction: column;
     row-gap: 15px;
   }
   .bloc_right-desc,
-  .bloc_right-tel{
+  .bloc_right-tel {
     font-size: 20px;
+  }
+  .tabs {
+    gap: 18px;
+    justify-content: center;
+  }
+}
+@media (max-width: 360px) {
+  .tabs_container {
+    height: 760px;
+  }
+  .check_input{
+    font: 14px;
   }
 }
 @media (max-width: 340px) {
@@ -307,5 +356,9 @@ justify-content: center;
   .main_bloks {
     margin-top: 40px;
     gap: 35px;
+  }
+  .tabs {
+    gap: 16px;
+    justify-content: center;
   }
 }
