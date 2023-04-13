@@ -47,8 +47,6 @@ const booksSwiper = document.querySelector(".books_swiper");
 const booksLatestSwiper = document.querySelector(".books_latest_swiper");
 const manuscriptsSwiper = document.querySelector(".manuscripts_swiper");
 
-
-
 if (slider) {
   function mobileSlider() {
     if (window.innerWidth <= 890 && slider.dataset.mobile == "false") {
@@ -62,7 +60,7 @@ if (slider) {
         loop: true,
         slideClass: "swiper-slide",
       });
-  
+
       slider.dataset.mobile = true;
     } else if (window.innerWidth > 890 && mySwiper) {
       slider.dataset.mobile = false;
@@ -70,15 +68,13 @@ if (slider) {
       mySwiper.destroy();
     }
   }
-  
+
   mobileSlider();
-  
+
   window.addEventListener("resize", () => {
     mobileSlider();
   });
 }
-
-
 
 /************************************************************/
 
@@ -95,7 +91,7 @@ if (booksSwiper) {
         loop: true,
         slideClass: "swiper-slide",
       });
-  
+
       booksSwiper.dataset.mobile = true;
     } else if (window.innerWidth > 890 && mySwiper) {
       booksSwiper.dataset.mobile = false;
@@ -103,21 +99,22 @@ if (booksSwiper) {
       mySwiper.destroy();
     }
   }
-  
+
   mobileSwiper();
-  
+
   window.addEventListener("resize", () => {
     mobileSwiper();
   });
 }
 
-
-
 /************************************************************/
 
 if (booksLatestSwiper) {
   function mobileLatestSwiper() {
-    if (window.innerWidth <= 890 && booksLatestSwiper.dataset.mobile == "false") {
+    if (
+      window.innerWidth <= 890 &&
+      booksLatestSwiper.dataset.mobile == "false"
+    ) {
       mySwiper = new Swiper(booksLatestSwiper, {
         slidesPerView: 2,
         // spaceBetween: 10,
@@ -128,7 +125,7 @@ if (booksLatestSwiper) {
         loop: true,
         slideClass: "swiper-slide",
       });
-  
+
       booksLatestSwiper.dataset.mobile = true;
     } else if (window.innerWidth > 890 && mySwiper) {
       booksLatestSwiper.dataset.mobile = false;
@@ -136,20 +133,22 @@ if (booksLatestSwiper) {
       mySwiper.destroy();
     }
   }
-  
+
   mobileLatestSwiper();
-  
+
   window.addEventListener("resize", () => {
     mobileLatestSwiper();
   });
 }
 
-
 /************************************************************/
 
 if (manuscriptsSwiper) {
   function mobileMauscriptSwiper() {
-    if (window.innerWidth <= 890 && manuscriptsSwiper.dataset.mobile == "false") {
+    if (
+      window.innerWidth <= 890 &&
+      manuscriptsSwiper.dataset.mobile == "false"
+    ) {
       mySwiper = new Swiper(manuscriptsSwiper, {
         slidesPerView: 2,
         // spaceBetween: 10,
@@ -160,7 +159,7 @@ if (manuscriptsSwiper) {
         loop: true,
         slideClass: "swiper-slide",
       });
-  
+
       manuscriptsSwiper.dataset.mobile = true;
     } else if (window.innerWidth > 890 && mySwiper) {
       manuscriptsSwiper.dataset.mobile = false;
@@ -168,9 +167,9 @@ if (manuscriptsSwiper) {
       mySwiper.destroy();
     }
   }
-  
+
   mobileMauscriptSwiper();
-  
+
   window.addEventListener("resize", () => {
     mobileMauscriptSwiper();
   });
@@ -178,19 +177,39 @@ if (manuscriptsSwiper) {
 
 /**************tabs in additional pages*******************/
 
-let tabs = document.querySelectorAll('.description_tab');
-let descTabs = document.querySelectorAll('.tabs_description');
+let tabs = document.querySelectorAll(".description_tab");
+let descTabs = document.querySelectorAll(".tabs_description");
 
 for (let i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('click', function(e) {
+  tabs[i].addEventListener("click", function (e) {
     e.preventDefault();
     for (let j = 0; j < tabs.length; j++) {
-      tabs[j].classList.remove('active');
-      descTabs[j].classList.remove('active');
-      
+      tabs[j].classList.remove("active");
+      descTabs[j].classList.remove("active");
     }
-    tabs[i].classList.add('active');
-    descTabs[i].classList.add('active');
-  })
-  
+    tabs[i].classList.add("active");
+    descTabs[i].classList.add("active");
+  });
 }
+
+/*******additional pages swiper********/
+let slide = document.querySelectorAll(".mySwiper swiper-slide");
+let image = document.querySelectorAll(".mySwiper swiper-slide img");
+let openImage = document.querySelector(".container_image img");
+let largeImage = document.querySelector(".large_image");
+
+for (let i = 0; i < slide.length; i++) {
+  slide[i].addEventListener("click", function () {
+    for (let j = 0; j < slide.length; j++) {
+      slide[j].classList.remove("active");
+    }
+    slide[i].classList.add("active");
+    openImage.src = image[i].src;
+    largeImage.classList.add("active");
+  });
+}
+largeImage.addEventListener('click', function(){
+  this.classList.remove('active');
+} );
+
+  
